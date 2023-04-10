@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        Set Color :
+        <!-- <input type="color" id="clr"> -->
+        <input type="color" value="#e0ffee" id="colorPicker" />
+        <button onclick="select_c();">Set Color</button>
+    </form>
+    <br>
+    <div id="test" style="width: 150px; height: 150px;"> 
+    </div>
+
+
+    
+    <script>
+        function select_c(){
+            var body = document.getElementById("test");
+            var input = document.getElementById("colorPicker");
+            body.style.backgroundColor = input.value;
+        }
+    </script>
+</body>
+</html>

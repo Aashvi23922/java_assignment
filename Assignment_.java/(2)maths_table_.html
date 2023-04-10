@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        Enter any Number :
+        <input type="text" id="table">
+        <span id="num"></span>
+        <br>
+        <button onclick="return display_table()">Click Here</button>
+        <p id="para"></p>
+    </form>
+
+    
+    <script>
+        function display_table(){
+            var count = document.getElementById("table").value;
+            if(count == ""){
+                document.getElementById("num").innertext = "Enter no";
+                return false
+            }else{
+                let no = 1;
+                let ans = "";
+                for(no=1; no<14; no++){
+                    ans = ans + "<p>" + count + "*" + no + "=" + count*no + "</P>";
+                }
+                document.querySelector("#para").innerHTML = ans;
+                return false;
+
+            }
+        }
+    </script>
+</body>
+</html>
